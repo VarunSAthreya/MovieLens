@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MovieCreateForm = (props) => {
-    const [form, setForm] = useState({
+    const defaultData = {
         name: "",
         description: "",
         rating: "",
         image: "",
         cover: "",
         longDesc: "",
-    });
+    };
+
+    const formData = props.initialData ? { ...props.initialData } : defaultData;
+
+    const [form, setForm] = useState(formData);
 
     const handleChange = (event) => {
         const target = event.target;

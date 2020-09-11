@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
-import { getMovieById, deleteMovie } from "../../actions";
+import { useEffect } from "react";
+import { getMovieById, deleteMovie } from "../../../actions";
 
 const Movie = (props) => {
     const router = useRouter();
@@ -33,6 +34,14 @@ const Movie = (props) => {
                     onClick={() => handleDeleteMovie(id)}
                 >
                     delete
+                </button>
+                <button
+                    className="btn btn-warning btn-lg ml-2"
+                    href="#"
+                    role="button"
+                    onClick={() => router.push(`/movies/${id}/edit`)}
+                >
+                    Edit
                 </button>
             </div>
             <p className="desc-text">{movie.longDesc}</p>
