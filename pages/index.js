@@ -6,6 +6,19 @@ import { getMovies, getCategories } from "../actions";
 
 const Home = (props) => {
     const { images, movies, categories } = props;
+    const [filter, setFilter] = useState("all");
+
+    const changeCategory = (category) => {
+        setFilter(category);
+    };
+
+    const filterMovies = (movies) => {
+        if (filter === "all") return movies;
+
+        return movies.filter((movie) => {
+            return movie.genre && movie.genre.includes(filter);
+        });
+    };
 
     return (
         <div>
@@ -14,6 +27,8 @@ const Home = (props) => {
                     <div className="row">
                         <div className="col-lg-3">
                             <SideMenu
+                                changeCategory={changeCategory}
+                                activeCategory={filter}
                                 categories={categories || []}
                                 appName="Movie DB"
                             />
@@ -21,8 +36,11 @@ const Home = (props) => {
 
                         <div className="col-lg-9">
                             <Carousel images={images} />
+                            <h1>Displaying {filter} movies</h1>
                             <div className="row">
-                                <MovieList movies={movies || []} />
+                                <MovieList
+                                    movies={filterMovies(movies) || []}
+                                />
                             </div>
                         </div>
                     </div>
