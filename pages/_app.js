@@ -1,4 +1,5 @@
-import "../styles/globals.css";
+import "../styles/index.scss";
+
 import App from "next/app";
 import Head from "next/head";
 import Navbar from "../components/navbar";
@@ -47,7 +48,8 @@ class MovieApp extends App {
                 <style jsx>
                     {`
                         .base-page {
-                            padding-top: 80px;
+                            padding-top: 100px;
+                            padding-bottom: 200px;
                         }
                     `}
                 </style>
