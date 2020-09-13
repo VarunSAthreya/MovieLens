@@ -6,14 +6,17 @@ const Carousel = ({ images }) => {
             data-ride="carousel"
         >
             <ol className="carousel-indicators">
-                {images.map((image, index) => (
-                    <li
-                        key={image.id}
-                        data-target="#carouselExampleIndicators"
-                        data-slide-to={index}
-                        className={index === 0 ? "active" : ""}
-                    ></li>
-                ))}
+                {images.map(
+                    (image, index) =>
+                        image.url && (
+                            <li
+                                key={image.id}
+                                data-target="#carouselExampleIndicators"
+                                data-slide-to={index}
+                                className={index === 0 ? "active" : ""}
+                            ></li>
+                        )
+                )}
             </ol>
             <div className="carousel-inner" role="listbox">
                 {images.map(
@@ -58,13 +61,6 @@ const Carousel = ({ images }) => {
                 ></span>
                 <span className="sr-only">Next</span>
             </a>
-            <style jsx>
-                {`
-                    .carousel-item {
-                        max-height: 400px;
-                    }
-                `}
-            </style>
         </div>
     );
 };

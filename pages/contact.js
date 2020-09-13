@@ -1,3 +1,3 @@
-const Contact = () => <div>Contact Page</div>;
+const Contact = () => <h1>Contact Page</h1>;
 
 export default Contact;

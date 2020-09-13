@@ -35,3 +35,13 @@ footer {
     font-weight: bold;
     color: white !important;
 }
+
+.carousel-item {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.base-page {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}

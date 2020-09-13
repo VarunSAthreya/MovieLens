@@ -21,13 +21,13 @@ const Movie = (props) => {
                 <p className="lead">{movie.description}</p>
                 <hr className="my-4" />
                 <p>{movie.genre}</p>
-                <button
+                {/* <button
                     className="btn btn-primary btn-lg"
                     href="#"
                     role="button"
                 >
                     Learn more
-                </button>
+                </button> */}
                 <button
                     className="btn btn-danger btn-lg ml-2"
                     href="#"
