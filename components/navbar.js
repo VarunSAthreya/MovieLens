@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container">
-                <a className="navbar-brand">Start Bootstrap</a>
+                <a className="navbar-brand">Movie DB</a>
                 <button
                     className="navbar-toggler"
                     type="button"

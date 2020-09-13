@@ -16,20 +16,23 @@ const Carousel = ({ images }) => {
                 ))}
             </ol>
             <div className="carousel-inner" role="listbox">
-                {images.map((image, index) => (
-                    <div
-                        key={image.id}
-                        className={`carousel-item ${
-                            index === 0 ? "active" : ""
-                        }`}
-                    >
-                        <img
-                            className="d-block img-fluid"
-                            src={image.url}
-                            alt={image.name}
-                        />
-                    </div>
-                ))}
+                {images.map(
+                    (image, index) =>
+                        image.url && (
+                            <div
+                                key={image.id}
+                                className={`carousel-item ${
+                                    index === 0 ? "active" : ""
+                                }`}
+                            >
+                                <img
+                                    className="d-block img-fluid"
+                                    src={image.url}
+                                    alt={image.name}
+                                />
+                            </div>
+                        )
+                )}
             </div>
             <a
                 className="carousel-control-prev"
