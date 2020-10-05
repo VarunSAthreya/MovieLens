@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 
@@ -13,6 +15,11 @@ const App = ({ Component, pageProps }) => {
             <Footer />
         </>
     );
+};
+
+App.propTypes = {
+    Component: PropTypes.node.isRequired,
+    pageProps: PropTypes.any.isRequired,
 };
 
 export default App;

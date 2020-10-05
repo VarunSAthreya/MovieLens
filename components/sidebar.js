@@ -1,14 +1,5 @@
-/**
- *
- * @param {{
- *  active: number;
- *  data: [{
- *      id: number;
- *      name: string;
- *  }];
- *  setActive(id: number): void;
- * }} props
- */
+import PropTypes from 'prop-types';
+
 const Sidebar = ({ active, data, setActive }) => {
     return (
         <aside className="flex flex-col space-y-2">
@@ -27,6 +18,17 @@ const Sidebar = ({ active, data, setActive }) => {
             ))}
         </aside>
     );
+};
+
+Sidebar.propTypes = {
+    active: PropTypes.number.isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    setActive: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
