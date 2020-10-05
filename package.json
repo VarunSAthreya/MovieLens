@@ -2,11 +2,6 @@
   "name": "movie-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
   "dependencies": {
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
@@ -14,5 +9,16 @@
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.6.2",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.8.10"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   }
 }
