@@ -1,52 +1,20 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div className="container">
-                <Link href="/">
-                    <a className="navbar-brand">Movie DB</a>
-                </Link>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active">
-                            <Link href="/">
-                                <a className="nav-link">
-                                    Home
-                                    <span className="sr-only">(current)</span>
-                                </a>
-                            </Link>
-                        </li>
-                        {/* <li className="nav-item">
-                            <Link href="/about">
-                                <a className="nav-link">About</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="services">
-                                <a className="nav-link">Services</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="contact">
-                                <a className="nav-link">Contact</a>
-                            </Link>
-                        </li> */}
-                    </ul>
+        <>
+            <header className="bg-gray-800">
+                <div className="max-w-6xl px-4 mx-auto sm:px-6 md:px-8 lg:px-10">
+                    <div className="flex items-center justify-between h-16">
+                        <Link href="/">
+                            <a className="text-gray-300 transition duration-150 ease-in-out hover:text-white focus:text-white focus:outline-none">
+                                Movie App
+                            </a>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </header>
+        </>
     );
 };
 
