@@ -1,6 +1,18 @@
-import PropTypes from 'prop-types';
+import type { FunctionComponent } from 'react';
 
-const Sidebar = ({ active, data, setActive }) => {
+import type { Genre } from '../interfaces';
+
+type Props = {
+    active: Genre['id'];
+    data: Genre[];
+    setActive(id: Genre['id']): void;
+};
+
+const Sidebar: FunctionComponent<Props> = ({
+    active,
+    data,
+    setActive,
+}: Props) => {
     return (
         <aside className="flex flex-col space-y-2">
             {data.map((item) => (
@@ -18,17 +30,6 @@ const Sidebar = ({ active, data, setActive }) => {
             ))}
         </aside>
     );
-};
-
-Sidebar.propTypes = {
-    active: PropTypes.number.isRequired,
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            name: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    setActive: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
