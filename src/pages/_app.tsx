@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import type { AppProps } from 'next/app';
 
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 
 import 'tailwindcss/tailwind.css';
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
         <>
             <Navbar />
@@ -15,11 +15,6 @@ const App = ({ Component, pageProps }) => {
             <Footer />
         </>
     );
-};
-
-App.propTypes = {
-    Component: PropTypes.node.isRequired,
-    pageProps: PropTypes.any.isRequired,
 };
 
 export default App;
