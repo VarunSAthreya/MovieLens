@@ -2,20 +2,31 @@
   "name": "movie-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "node server/index",
-    "build": "next build",
-    "start": "next start"
-  },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
     "axios": "^0.20.0",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
     "next": "9.5.3",
-    "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.6.2",
+    "@types/node": "^14.11.5",
+    "@types/react": "^16.9.51",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.3",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "tailwindcss": "^1.8.10",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   }
 }

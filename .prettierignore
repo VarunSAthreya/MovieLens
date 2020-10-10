@@ -1,1 +1,6 @@
+.editorconfig
+.gitignore
+.prettierignore
 package.json
+package-lock.json
+README.md
