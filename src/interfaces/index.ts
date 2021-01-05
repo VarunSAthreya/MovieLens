@@ -12,7 +12,7 @@ export interface Cast {
 export interface Crew {
     credit_id: string;
     department: string;
-    gener: number | null;
+    genre: number | null;
     id: number;
     job: string;
     name: string;

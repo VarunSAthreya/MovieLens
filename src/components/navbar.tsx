@@ -8,7 +8,7 @@ const Navbar: FunctionComponent = () => {
                 <div className="flex items-center justify-between h-16">
                     <Link href="/">
                         <a className="text-gray-300 transition duration-150 ease-in-out hover:text-white focus:text-white focus:outline-none">
-                            Movie App
+                            MovieLens
                         </a>
                     </Link>
                 </div>

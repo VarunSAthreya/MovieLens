@@ -2,7 +2,7 @@ const SEO = {
     defaultImage: ``,
     language: `en`,
     siteDescription: ``,
-    siteName: `Movie App`,
+    siteName: `MovieLens`,
     siteUrl: ``,
     twitterCardType: `summary_large_image`,
     twitterUsername: ``,

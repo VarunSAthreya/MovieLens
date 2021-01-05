@@ -36,7 +36,7 @@ const MovieCard: FunctionComponent<Props> = ({ movie }: Props) => {
                             <time
                                 dateTime={new Date(
                                     movie.release_date
-                                ).toISOString()}
+                                ).toString()}
                             >
                                 {new Date(movie.release_date).getFullYear()}
                             </time>
