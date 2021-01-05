@@ -1,12 +1,9 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
-
 import Head from '../components/head';
 import MovieCard from '../components/movie-card';
 import Sidebar from '../components/sidebar';
-
 import type { Genre, MovieShort } from '../interfaces';
-
 import { getGenreList, getNowPlaying } from '../lib/api';
 
 const all: Genre = { id: -1, name: 'All' };

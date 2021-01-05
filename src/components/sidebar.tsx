@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react';
-
 import type { Genre } from '../interfaces';
 
 type Props = {

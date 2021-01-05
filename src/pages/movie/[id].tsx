@@ -1,11 +1,8 @@
 import type { GetServerSidePropsContext, NextPage } from 'next';
-
 import Head from '../../components/head';
 import List from '../../components/list';
 import MovieCard from '../../components/movie-card';
-
 import { Cast, Crew, MovieLong, MovieShort } from '../../interfaces';
-
 import { getCredits, getMovieDetails, getSimilarMovies } from '../../lib/api';
 
 type Props = {

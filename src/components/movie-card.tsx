@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import type { FunctionComponent } from 'react';
-
 import type { MovieShort } from '../interfaces';
 
 type Props = {

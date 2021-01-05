@@ -1,9 +1,7 @@
 import type { AppProps } from 'next/app';
-
+import 'tailwindcss/tailwind.css';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
-
-import 'tailwindcss/tailwind.css';
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (

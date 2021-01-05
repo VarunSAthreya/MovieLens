@@ -1,7 +1,6 @@
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
 import type { FunctionComponent } from 'react';
-
 import SEO from '../seo.config';
 
 type Props = {
