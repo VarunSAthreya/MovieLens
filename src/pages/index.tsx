@@ -30,7 +30,7 @@ const Home: NextPage<Props> = ({ genres, movies }: Props) => {
 
     return (
         <>
-            <Head title="Home | Movies App" />
+            <Head title="Home" />
 
             <section className="py-16">
                 <div className="max-w-6xl px-4 mx-auto sm:px-6 md:px-8 lg:px-10">
